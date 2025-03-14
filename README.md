@@ -1,2 +1,2 @@
 # ExaPraAdmProMonje
-# Proyecto que hace la gestión de empleados
+Proyecto que hace la gestión de empleados
