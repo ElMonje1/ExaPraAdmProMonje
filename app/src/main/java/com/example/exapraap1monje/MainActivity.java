@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {//Inicia clase Main
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Integración de XML a JAVA
+        btnMenu = findViewById(R.id.btnMenu);
+        etPassword = findViewById(R.id.etPassword);
 
-        etPassword.findViewById(R.id.etPassword);
-        btnMenu.findViewById(R.id.btnMenu);
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,4 +31,5 @@ public class MainActivity extends AppCompatActivity {//Inicia clase Main
         });
 
     }//Termina metodo oncreate
+
 }//Termina clase Main
