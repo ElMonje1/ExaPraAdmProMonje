@@ -1,24 +1,34 @@
 package com.example.exapraap1monje;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity {//Inicia clase Main
+    private Button btnMenu;
+    private EditText etPassword;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//Inicia metodo oncreate
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        //Integración de XML a JAVA
+
+        etPassword.findViewById(R.id.etPassword);
+        btnMenu.findViewById(R.id.btnMenu);
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent abrirMenu = new Intent(getApplicationContext(), MenuEmpleados.class);
+                startActivity(abrirMenu);
+            }
         });
-    }
-}
+
+    }//Termina metodo oncreate
+}//Termina clase Main
